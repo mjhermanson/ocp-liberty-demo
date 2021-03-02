@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<archive>
-    <dir sourceOnDisk="/Users/mhermans/github/open-liberty-on-aro/3-integration/connect-db/postgres/src/main/webapp" targetInArchive="/"/>
-    <dir sourceOnDisk="/Users/mhermans/github/open-liberty-on-aro/3-integration/connect-db/postgres/target/classes" targetInArchive="/WEB-INF/classes"/>
-    <file sourceOnDisk="/Users/mhermans/.m2/repository/org/postgresql/postgresql/42.2.4/postgresql-42.2.4.jar" targetInArchive="/WEB-INF/lib/postgresql-42.2.4.jar"/>
-    <file sourceOnDisk="/Users/mhermans/github/open-liberty-on-aro/3-integration/connect-db/postgres/target/tmp/META-INF/MANIFEST.MF" targetInArchive="/META-INF/MANIFEST.MF"/>
-</archive>
