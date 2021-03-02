@@ -22,17 +22,19 @@ steps:
     goals: 'package'
 - task: CmdLine@2
   inputs:
-    script: 'pwd'
+    script: 'find .'
+
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    cmd: 'oc new-project open-liberty-demo'
 
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'OCP 4.7 RHPDS'
     cmd: 'oc start-build --from-dir=postgres/ --follow aro-cafe-postgres'
-- task: oc-cmd@2
-  inputs:
-    connectionType: 'OpenShift Connection Service'
-    cmd: 'oc new-project open-liberty-demo'
+
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
