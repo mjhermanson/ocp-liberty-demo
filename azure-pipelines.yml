@@ -31,12 +31,16 @@ steps:
     cmd: 'oc new-project open-liberty-demo'
     ignoreFlag: true
 
-- task: oc-cmd@2
+- task: CmdLine@2
   inputs:
-    connectionType: 'OpenShift Connection Service'
-    openshiftService: 'OCP 4.7 RHPDS'
-    cmd: 'oc start-build --from-dir=~/postgres --follow aro-cafe-postgres'
-    uselocalOc: true
+    script: 'oc start-build --from-dir=./postgres --follow aro-cafe-postgres'
+
+#- task: oc-cmd@2
+#  inputs:
+#    connectionType: 'OpenShift Connection Service'
+#    openshiftService: 'OCP 4.7 RHPDS'
+#    cmd: 'oc start-build --from-dir=~/postgres --follow aro-cafe-postgres'
+#    uselocalOc: true
 
 - task: oc-cmd@2
   inputs:
