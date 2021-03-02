@@ -34,6 +34,11 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'OCP 4.7 RHPDS'
+    cmd: 'project open-liberty-demo'
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OCP 4.7 RHPDS'
     cmd: 'new-build open-liberty --name=aro-cafe-postgres --binary=true'
 - task: CmdLine@2
   inputs:
