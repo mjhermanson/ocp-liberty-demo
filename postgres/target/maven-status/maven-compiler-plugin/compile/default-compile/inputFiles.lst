@@ -1,0 +1,4 @@
+/Users/mhermans/github/open-liberty-on-aro/3-integration/connect-db/postgres/src/main/java/cafe/model/CafeRepository.java
+/Users/mhermans/github/open-liberty-on-aro/3-integration/connect-db/postgres/src/main/java/cafe/model/entity/Coffee.java
+/Users/mhermans/github/open-liberty-on-aro/3-integration/connect-db/postgres/src/main/java/cafe/web/view/Cafe.java
+/Users/mhermans/github/open-liberty-on-aro/3-integration/connect-db/postgres/src/main/java/cafe/web/rest/CafeResource.java
