@@ -40,6 +40,7 @@ steps:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'OCP 4.7 RHPDS'
     cmd: 'new-build open-liberty --name=aro-cafe-postgres --binary=true'
+    ignoreFlag: true
 - task: CmdLine@2
   inputs:
     script: 'oc start-build --from-dir=./postgres --follow aro-cafe-postgres'
