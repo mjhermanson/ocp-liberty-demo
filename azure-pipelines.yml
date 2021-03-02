@@ -48,4 +48,4 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'OCP 4.7 RHPDS'
-    cmd: 'oc create -f openlibertyapplication.yaml'
+    cmd: 'oc create -f ${SYSTEM_DEFAULTWORKINGDIRECTORY}/openlibertyapplication.yaml'
