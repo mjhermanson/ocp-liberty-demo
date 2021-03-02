@@ -20,6 +20,9 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: CmdLine@2
+  inputs:
+    script: 'pwd'
 
 - task: oc-cmd@2
   inputs:
