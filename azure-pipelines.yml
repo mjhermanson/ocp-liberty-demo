@@ -27,6 +27,7 @@ steps:
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OCP 4.7 RHPDS'
     cmd: 'oc new-project open-liberty-demo'
 
 - task: oc-cmd@2
@@ -38,4 +39,5 @@ steps:
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OCP 4.7 RHPDS'
     cmd: 'oc create -f openlibertyapplication.yaml'
