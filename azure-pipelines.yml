@@ -12,11 +12,43 @@ pool:
 steps:
 - task: Maven@3
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'postgres/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OCP 4.7 RHPDS'
+    cmd: 'oc new-project open-liberty-demo'
+    ignoreFlag: true
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OCP 4.7 RHPDS'
+    cmd: 'project open-liberty-demo'
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OCP 4.7 RHPDS'
+    cmd: 'new-build open-liberty --name=aro-cafe-postgres --binary=true'
+    ignoreFlag: true
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OCP 4.7 RHPDS'
+    cmd: 'start-build --from-dir=${SYSTEM_DEFAULTWORKINGDIRECTORY}/postgres --follow aro-cafe-postgres'
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OCP 4.7 RHPDS'
+    cmd: 'create -f ${SYSTEM_DEFAULTWORKINGDIRECTORY}/db-secret.yaml'
+
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OCP 4.7 RHPDS'
+    cmd: 'oc create -f ${SYSTEM_DEFAULTWORKINGDIRECTORY}/openlibertyapplication-postgres.yaml'
