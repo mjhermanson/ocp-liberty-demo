@@ -40,7 +40,7 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'OCP 4.7 RHPDS'
-    cmd: 'start-build --from-dir=apply -f ${SYSTEM_DEFAULTWORKINGDIRECTORY}/postgres --follow aro-cafe-postgres'
+    cmd: 'start-build --from-dir=${SYSTEM_DEFAULTWORKINGDIRECTORY}/postgres --follow aro-cafe-postgres'
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
