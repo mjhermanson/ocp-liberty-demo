@@ -42,3 +42,8 @@ spec:
       secretKeyRef:
         name: db-secret-postgres
         key: db.password
+  - name: DB_PASSWORD
+    valueFrom:
+      secretKeyRef:
+      name: db-secret-postgres
+      key: db.ssl
