@@ -31,6 +31,7 @@ steps:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'OCP 4.7 RHPDS'
     cmd: 'oc delete -f ${SYSTEM_DEFAULTWORKINGDIRECTORY}/openlibertyapplication-postgres.yaml'
+    ignoreFlag: true
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
