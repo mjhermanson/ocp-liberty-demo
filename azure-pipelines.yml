@@ -46,7 +46,7 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'OCP 4.7 RHPDS'
-    cmd: 'create -f ${SYSTEM_DEFAULTWORKINGDIRECTORY}/db-secret-postgres.yaml'
+    cmd: 'apply -f ${SYSTEM_DEFAULTWORKINGDIRECTORY}/db-secret-postgres.yaml'
 - task: CmdLine@2
   inputs:
     script: 'env'
