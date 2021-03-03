@@ -11,7 +11,7 @@ spec:
   # Note: 
   # - replace "${Image_Name}" with "javaee-cafe-connect-db-mssql" for testing DB connection with Azure SQL
   # - replace "${Image_Name}" with "javaee-cafe-connect-db-postgres" for testing DB connection with Azure Database for PostgreSQL
-  applicationImage: aro-cafe-postgres:latest
+  applicationImage: open-liberty-demo/aro-cafe-postgres:latest
   expose: true
   # Note:
   # - replace "postgres" with "mssql" for testing DB connection with Azure SQL
@@ -42,8 +42,8 @@ spec:
       secretKeyRef:
         name: db-secret-postgres
         key: db.password
-  - name: DB_PASSWORD
+  - name: DB_SSL
     valueFrom:
       secretKeyRef:
-      name: db-secret-postgres
-      key: db.ssl
+        key: db.ssl
+        name: db-secret-postgres
