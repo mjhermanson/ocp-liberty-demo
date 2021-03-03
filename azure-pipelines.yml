@@ -41,12 +41,14 @@ steps:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'OCP 4.7 RHPDS'
     cmd: 'start-build --from-dir=${SYSTEM_DEFAULTWORKINGDIRECTORY}/postgres --follow aro-cafe-postgres'
-- task: oc-cmd@2
+#- task: oc-cmd@2
+#  inputs:
+3    connectionType: 'OpenShift Connection Service'
+#    openshiftService: 'OCP 4.7 RHPDS'
+#    cmd: 'create -f ${SYSTEM_DEFAULTWORKINGDIRECTORY}/db-secret.yaml'
+- task: CmdLine@2
   inputs:
-    connectionType: 'OpenShift Connection Service'
-    openshiftService: 'OCP 4.7 RHPDS'
-    cmd: 'create -f ${SYSTEM_DEFAULTWORKINGDIRECTORY}/db-secret.yaml'
-
+    script: 'envsubst < db-secret.yaml | oc create -f -'
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
