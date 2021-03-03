@@ -45,7 +45,7 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'OCP 4.7 RHPDS'
-    cmd: 'create -f db-secret.yaml'
+    cmd: 'create -f ${SYSTEM_DEFAULTWORKINGDIRECTORY}/db-secret.yaml'
 
 - task: oc-cmd@2
   inputs:
