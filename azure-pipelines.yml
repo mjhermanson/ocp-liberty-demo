@@ -10,11 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: SonarQubePrepare@4
-  inputs:
-    SonarQube: 'SonarQube on ARO'
-    scannerMode: 'CLI'
-    configMode: 'file'
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'postgres/pom.xml'
