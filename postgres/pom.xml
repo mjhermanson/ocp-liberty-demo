@@ -48,12 +48,29 @@
   </build>
   <profiles>
     <profile>
+        <id>sonar</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            <!-- Optional URL to server. Default value is http://localhost:9000 -->
+            <sonar.host.url>
+            http://sonarqube-scanning-tools.apps.aymnlmz4.eastus2.aroapp.io/ 
+            </sonar.host.url>
+        </properties>
+    </profile>
+    <profile>
       <id>liberty</id>
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
       <build>
         <plugins>
+          <plugin>
+              <groupId>org.sonarsource.scanner.maven</groupId>
+              <artifactId>sonar-maven-plugin</artifactId>
+              <version>3.3.0.603</version>
+          </plugin>
           <!-- Enable liberty-maven-plugin -->
           <plugin>
             <groupId>io.openliberty.tools</groupId>
