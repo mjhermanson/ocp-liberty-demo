@@ -13,21 +13,25 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'postgres/pom.xml'
-    mavenOptions: '-Xmx3072m'
+    publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    goals: 'package'
+    mavenVersionOption: 'Default'
+    mavenOptions: '-Xmx3072m'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: true
+    sqMavenPluginVersionChoice: 'latest'
 
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
-    openshiftService: 'OCP 4.7 RHPDS'
+    openshiftService: 'Azure Red Hat Openshift'
     cmd: 'project open-liberty-demo'
 
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
-    openshiftService: 'OCP 4.7 RHPDS'
+    openshiftService: 'Azure Red Hat Openshift'
     cmd: 'start-build --from-dir=${SYSTEM_DEFAULTWORKINGDIRECTORY}/postgres --follow aro-cafe-postgres'
 
