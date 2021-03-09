@@ -13,8 +13,12 @@ steps:
 - task: SonarQubePrepare@4
   inputs:
     SonarQube: 'SonarQube on ARO'
-    scannerMode: 'CLI'
-    configMode: 'file'
+    scannerMode: 'Other'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.projectKey=cafe
 
 - task: Maven@3
   inputs:
