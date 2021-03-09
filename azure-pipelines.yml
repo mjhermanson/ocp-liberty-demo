@@ -21,7 +21,7 @@ steps:
       sonar.projectKey=cafe
 - task: CmdLine@2
   inputs:
-    script: 'mvn sonar:sonar -Dsonar.login=7380491f8fbe91a8541ef7590aaef0b20cd1e163'
+    script: 'mvn sonar:sonar -Dsonar.login=7380491f8fbe91a8541ef7590aaef0b20cd1e163 -f postgres/pom.xml'
 
 - task: Maven@3
   inputs:
