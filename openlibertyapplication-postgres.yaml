@@ -5,7 +5,7 @@ metadata:
   # - replace "postgres" with "mssql" for testing DB connection with Azure SQL
   # - replace "postgres" with "postgres" for testing DB connection with Azure Database for PostgreSQL
   name: javaee-cafe-connect-db-postgres
-  namespace: mhermans 
+  namespace: open-liberty-demo 
 spec:
   replicas: 1
   # Note: 
