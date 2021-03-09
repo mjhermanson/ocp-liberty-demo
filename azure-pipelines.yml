@@ -19,7 +19,9 @@ steps:
       # Put one key=value per line, example:
       # sonar.exclusions=**/*.bin
       sonar.projectKey=cafe
-- task: SonarQubeAnalyze@4
+- task: CmdLine@2
+  inputs:
+    script: 'mvn sonar:sonar -Dsonar.login=7380491f8fbe91a8541ef7590aaef0b20cd1e163'
 
 - task: Maven@3
   inputs:
@@ -31,8 +33,7 @@ steps:
     mavenOptions: '-Xmx3072m'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    sonarQubeRunAnalysis: true
-    sqMavenPluginVersionChoice: 'latest'
+    sonarQubeRunAnalysis: false
 
 - task: oc-cmd@2
   inputs:
