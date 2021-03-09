@@ -19,7 +19,7 @@ steps:
       # Put one key=value per line, example:
       # sonar.exclusions=**/*.bin
       sonar.projectKey=cafe
-      sonar.branch.name=main
+- task: SonarQubeAnalyze@4
 
 - task: Maven@3
   inputs:
