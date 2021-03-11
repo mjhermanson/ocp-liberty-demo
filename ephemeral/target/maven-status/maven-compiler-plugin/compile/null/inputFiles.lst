@@ -1,4 +1,4 @@
-/projects/kitchensink-example/ephemeral/src/main/java/cafe/model/CafeRepository.java
-/projects/kitchensink-example/ephemeral/src/main/java/cafe/model/entity/Coffee.java
-/projects/kitchensink-example/ephemeral/src/main/java/cafe/web/rest/CafeResource.java
-/projects/kitchensink-example/ephemeral/src/main/java/cafe/web/view/Cafe.java
+/projects/websphere-liberty-example/ephemeral/src/main/java/cafe/web/rest/CafeResource.java
+/projects/websphere-liberty-example/ephemeral/src/main/java/cafe/model/CafeRepository.java
+/projects/websphere-liberty-example/ephemeral/src/main/java/cafe/web/view/Cafe.java
+/projects/websphere-liberty-example/ephemeral/src/main/java/cafe/model/entity/Coffee.java

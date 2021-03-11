@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive>
-    <dir sourceOnDisk="/projects/kitchensink-example/ephemeral/src/main/webapp" targetInArchive="/"/>
-    <dir sourceOnDisk="/projects/kitchensink-example/ephemeral/target/classes" targetInArchive="/WEB-INF/classes"/>
-    <file sourceOnDisk="/projects/kitchensink-example/ephemeral/target/tmp/META-INF/MANIFEST.MF" targetInArchive="/META-INF/MANIFEST.MF"/>
+    <dir sourceOnDisk="/projects/websphere-liberty-example/ephemeral/src/main/webapp" targetInArchive="/"/>
+    <dir sourceOnDisk="/projects/websphere-liberty-example/ephemeral/target/classes" targetInArchive="/WEB-INF/classes"/>
+    <file sourceOnDisk="/projects/websphere-liberty-example/ephemeral/target/tmp/META-INF/MANIFEST.MF" targetInArchive="/META-INF/MANIFEST.MF"/>
 </archive>
