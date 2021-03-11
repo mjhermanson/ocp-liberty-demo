@@ -3,13 +3,13 @@
     <activeBuildProfiles>
         <profileId>liberty</profileId>
     </activeBuildProfiles>
-    <installDirectory>/Users/mhermans/github/open-liberty-on-aro/1-start/target/liberty/wlp</installDirectory>
-    <serverDirectory>/Users/mhermans/github/open-liberty-on-aro/1-start/target/liberty/wlp/usr/servers/defaultServer</serverDirectory>
-    <userDirectory>/Users/mhermans/github/open-liberty-on-aro/1-start/target/liberty/wlp/usr</userDirectory>
-    <serverOutputDirectory>/Users/mhermans/github/open-liberty-on-aro/1-start/target/wlp-package/defaultServer</serverOutputDirectory>
+    <installDirectory>/projects/kitchensink-example/ephemeral/target/liberty/wlp</installDirectory>
+    <serverDirectory>/projects/kitchensink-example/ephemeral/target/liberty/wlp/usr/servers/defaultServer</serverDirectory>
+    <userDirectory>/projects/kitchensink-example/ephemeral/target/liberty/wlp/usr</userDirectory>
+    <serverOutputDirectory>/projects/kitchensink-example/ephemeral/target/wlp-package/defaultServer</serverOutputDirectory>
     <serverName>defaultServer</serverName>
-    <configDirectory>/Users/mhermans/github/open-liberty-on-aro/1-start/src/main/liberty/config</configDirectory>
-    <configFile>/Users/mhermans/github/open-liberty-on-aro/1-start/src/main/liberty/config/server.xml</configFile>
+    <configDirectory>/projects/kitchensink-example/ephemeral/src/main/liberty/config</configDirectory>
+    <configFile>/projects/kitchensink-example/ephemeral/src/main/liberty/config/server.xml</configFile>
     <appsDirectory>apps</appsDirectory>
     <looseApplication>true</looseApplication>
     <stripVersion>false</stripVersion>
@@ -21,9 +21,9 @@
         <version>21.0.0.2</version>
         <type>zip</type>
     </assemblyArtifact>
-    <assemblyArchive>/Users/mhermans/.m2/repository/io/openliberty/openliberty-kernel/21.0.0.2/openliberty-kernel-21.0.0.2.zip</assemblyArchive>
-    <assemblyInstallDirectory>/Users/mhermans/github/open-liberty-on-aro/1-start/target/liberty</assemblyInstallDirectory>
+    <assemblyArchive>/home/user/.m2/repository/io/openliberty/openliberty-kernel/21.0.0.2/openliberty-kernel-21.0.0.2.zip</assemblyArchive>
+    <assemblyInstallDirectory>/projects/kitchensink-example/ephemeral/target/liberty</assemblyInstallDirectory>
     <refresh>false</refresh>
-    <installAppsConfigDropins>/Users/mhermans/github/open-liberty-on-aro/1-start/target/liberty/wlp/usr/servers/defaultServer/configDropins/defaults/install_apps_configuration_1491924271.xml</installAppsConfigDropins>
+    <installAppsConfigDropins>/projects/kitchensink-example/ephemeral/target/liberty/wlp/usr/servers/defaultServer/configDropins/defaults/install_apps_configuration_1491924271.xml</installAppsConfigDropins>
     <projectType>war</projectType>
 </liberty-plugin-config>
