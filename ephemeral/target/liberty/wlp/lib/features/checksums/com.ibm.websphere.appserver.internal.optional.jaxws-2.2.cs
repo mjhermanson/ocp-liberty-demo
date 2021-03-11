@@ -1,0 +1,3 @@
+#Mon Mar 01 09:58:22 PST 2021
+lib/features/com.ibm.websphere.appserver.internal.optional.jaxws-2.2.mf=4955589bd386ef135d90d039a9477edc
+dev/api/spec/com.ibm.websphere.javaee.jaxws.2.2_1.0.49.jar=f2e7938b743baccd184f3b11e8862694

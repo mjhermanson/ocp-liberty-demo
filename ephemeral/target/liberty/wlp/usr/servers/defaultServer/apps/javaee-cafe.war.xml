@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive>
+    <dir sourceOnDisk="/Users/mhermans/github/open-liberty-on-aro/1-start/src/main/webapp" targetInArchive="/"/>
+    <dir sourceOnDisk="/Users/mhermans/github/open-liberty-on-aro/1-start/target/classes" targetInArchive="/WEB-INF/classes"/>
+    <file sourceOnDisk="/Users/mhermans/github/open-liberty-on-aro/1-start/target/tmp/META-INF/MANIFEST.MF" targetInArchive="/META-INF/MANIFEST.MF"/>
+</archive>
