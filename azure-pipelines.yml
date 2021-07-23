@@ -24,7 +24,7 @@ steps:
     sonarQubeRunAnalysis: false
 - task: CmdLine@2
   inputs:
-    script: 'mvn sonar:sonar -Dsonar.login=da725a832720b8d8f7bc9a19ad488fcf0cad2220 -f postgres/pom.xml'
+    script: 'mvn sonar:sonar -Dsonar.login=432145c5ecfff704d2a3e86f86b5ed9abd84714d -f postgres/pom.xml'
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
