@@ -13,7 +13,10 @@ steps:
 - task: SonarQubePrepare@4
   inputs:
     SonarQube: 'OCP Sonarqube'
-    scannerMode: 'Other'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'javaee-cafe:javaee-cafe'
+    cliSources: '.'
 
 - task: Maven@3
   inputs:
@@ -25,8 +28,7 @@ steps:
     mavenOptions: '-Xmx3072m'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    sonarQubeRunAnalysis: true
-    sqMavenPluginVersionChoice: 'latest'
+    sonarQubeRunAnalysis: false
 #- task: CmdLine@2
 #  inputs:
 #    script: 'mvn sonar:sonar -Dsonar.login=432145c5ecfff704d2a3e86f86b5ed9abd84714d -f postgres/pom.xml'
