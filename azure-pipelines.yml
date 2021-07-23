@@ -31,6 +31,8 @@ steps:
     SonarQube: 'OCP Sonarqube'
     scannerMode: 'Other'
 
+- task: SonarQubeAnalyze@4
+
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
