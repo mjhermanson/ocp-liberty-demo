@@ -10,19 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: SonarQubePrepare@4
-  inputs:
-    SonarQube: 'OCP Sonarqube'
-    scannerMode: 'CLI'
-    configMode: 'manual'
-    cliProjectKey: 'javaee-cafe:javaee-cafe'
-    cliSources: '.'
-    extraProperties: |
-      # Additional properties that will be passed to the scanner, 
-      # Put one key=value per line, example:
-      # sonar.exclusions=**/*.bin
-      sonar.login=admin
-      sonar.password=r3dh4t1!
+
 
 - task: Maven@3
   inputs:
@@ -39,9 +27,6 @@ steps:
 #  inputs:
 #    script: 'mvn sonar:sonar -Dsonar.login=432145c5ecfff704d2a3e86f86b5ed9abd84714d -f postgres/pom.xml'
 
-
-
-- task: SonarQubeAnalyze@4
 
 - task: oc-cmd@2
   inputs:
