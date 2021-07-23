@@ -22,9 +22,15 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-- task: CmdLine@2
+#- task: CmdLine@2
+#  inputs:
+#    script: 'mvn sonar:sonar -Dsonar.login=432145c5ecfff704d2a3e86f86b5ed9abd84714d -f postgres/pom.xml'
+
+- task: SonarQubePrepare@4
   inputs:
-    script: 'mvn sonar:sonar -Dsonar.login=432145c5ecfff704d2a3e86f86b5ed9abd84714d -f postgres/pom.xml'
+    SonarQube: 'OCP Sonarqube'
+    scannerMode: 'Other'
+
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
