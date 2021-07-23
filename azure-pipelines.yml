@@ -17,6 +17,12 @@ steps:
     configMode: 'manual'
     cliProjectKey: 'javaee-cafe:javaee-cafe'
     cliSources: '.'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.login=admin
+      sonar.password=r3dh4t1!
 
 - task: Maven@3
   inputs:
