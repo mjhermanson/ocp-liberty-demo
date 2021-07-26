@@ -23,9 +23,9 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-#- task: CmdLine@2
-#  inputs:
-#    script: 'mvn sonar:sonar -Dsonar.login=9396093244826df309d61ebfefcd6a91914123d3 -f postgres/pom.xml'
+- task: CmdLine@2
+  inputs:
+    script: 'mvn sonar:sonar -Dsonar.login=9396093244826df309d61ebfefcd6a91914123d3 -f postgres/pom.xml'
 
 
 - task: oc-cmd@2
