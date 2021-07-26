@@ -25,7 +25,7 @@ steps:
     sonarQubeRunAnalysis: false
 - task: CmdLine@2
   inputs:
-    script: 'mvn sonar:sonar -Dsonar.login=9396093244826df309d61ebfefcd6a91914123d3 -f postgres/pom.xml'
+    script: 'mvn sonar:sonar -Dsonar.login=787eaa4b8890eff1908fca3101ec8c113c0dbe47 -f postgres/pom.xml'
 
 
 - task: oc-cmd@2
