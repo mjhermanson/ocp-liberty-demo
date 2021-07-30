@@ -55,7 +55,7 @@
         <properties>
             <!-- Optional URL to server. Default value is http://localhost:9000 -->
             <sonar.host.url>
-            http://sonarqube-scanners.apps.cluster-d88b.d88b.sandbox60.opentlc.com/ 
+            http://sonarqube-scanners.apps.cluster-a14f.a14f.sandbox675.opentlc.com 
             </sonar.host.url>
         </properties>
     </profile>
