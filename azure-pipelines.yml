@@ -31,12 +31,12 @@ steps:
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
-    openshiftService: 'OCP d88b'
+    openshiftService: 'OCP a14f'
     cmd: 'project open-liberty-demo'
 
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
-    openshiftService: 'OCP d88b'
+    openshiftService: 'OCP a14f'
     cmd: 'start-build --from-dir=${SYSTEM_DEFAULTWORKINGDIRECTORY}/postgres --follow aro-cafe-postgres'
 
