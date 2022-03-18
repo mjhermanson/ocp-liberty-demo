@@ -32,7 +32,7 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'Red Hat Openshift'
-    cmd: 'project open-liberty-demo'
+    cmd: 'project aro-cafe-postgres'
 
 - task: oc-cmd@2
   inputs:
