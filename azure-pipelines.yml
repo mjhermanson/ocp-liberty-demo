@@ -31,7 +31,7 @@ steps:
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
-    openshiftService: 'OCP a14f'
+    openshiftService: 'Red Hat Openshift'
     cmd: 'project open-liberty-demo'
 
 - task: oc-cmd@2
